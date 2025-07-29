@@ -1,0 +1,1425 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "properties": {
+    "colorSemanticTokens": {
+      "additionalProperties": false,
+      "properties": {
+        "dark": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        },
+        "darkHighContrast": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        },
+        "light": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "lightHighContrast": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        }
+      },
+      "required": [
+        "light"
+      ],
+      "type": "object"
+    },
+    "componentSizes": {
+      "additionalProperties": false,
+      "properties": {
+        "buttonSizes": {
+          "additionalProperties": {
+            "additionalProperties": false,
+            "properties": {
+              "iconSpacing": {
+                "type": "string"
+              },
+              "iconStyle": {
+                "type": "string"
+              },
+              "internalPadding": {
+                "$ref": "#/definitions/padding"
+              },
+              "typographyStyle": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "iconSpacing",
+              "iconStyle",
+              "typographyStyle"
+            ],
+            "type": "object"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "checkboxSizes": {
+          "additionalProperties": {
+            "additionalProperties": false,
+            "properties": {
+              "height": {
+                "type": "string"
+              },
+              "iconStyle": {
+                "type": "string"
+              },
+              "width": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "height",
+              "iconStyle",
+              "width"
+            ],
+            "type": "object"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "chipSizes": {
+          "additionalProperties": {
+            "additionalProperties": false,
+            "properties": {
+              "iconButtonSize": {
+                "type": "string"
+              },
+              "iconSpacing": {
+                "type": "string"
+              },
+              "internalPadding": {
+                "$ref": "#/definitions/padding"
+              },
+              "leadingIconStyle": {
+                "type": "string"
+              },
+              "trailingIconStyle": {
+                "type": "string"
+              },
+              "typographyStyle": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "iconButtonSize",
+              "iconSpacing",
+              "internalPadding",
+              "leadingIconStyle",
+              "trailingIconStyle",
+              "typographyStyle"
+            ],
+            "type": "object"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "iconButtonSizes": {
+          "additionalProperties": {
+            "additionalProperties": false,
+            "properties": {
+              "iconStyle": {
+                "type": "string"
+              },
+              "internalPadding": {
+                "$ref": "#/definitions/padding"
+              }
+            },
+            "required": [
+              "iconStyle"
+            ],
+            "type": "object"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "iconSizes": {
+          "additionalProperties": {
+            "additionalProperties": false,
+            "properties": {
+              "size": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "size"
+            ],
+            "type": "object"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "iconWithBackgroundSizes": {
+          "additionalProperties": {
+            "additionalProperties": false,
+            "properties": {
+              "cornerRadius": {
+                "additionalProperties": false,
+                "properties": {
+                  "bottomLeft": {
+                    "type": "string"
+                  },
+                  "bottomRight": {
+                    "type": "string"
+                  },
+                  "topLeft": {
+                    "type": "string"
+                  },
+                  "topRight": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "bottomLeft",
+                  "bottomRight",
+                  "topLeft",
+                  "topRight"
+                ],
+                "type": "object"
+              },
+              "iconSize": {
+                "type": "string"
+              },
+              "internalPadding": {
+                "$ref": "#/definitions/padding"
+              }
+            },
+            "required": [
+              "cornerRadius",
+              "iconSize",
+              "internalPadding"
+            ],
+            "type": "object"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "radioButtonSizes": {
+          "additionalProperties": {
+            "additionalProperties": false,
+            "properties": {
+              "selected": {
+                "additionalProperties": false,
+                "properties": {
+                  "innerHeight": {
+                    "type": "string"
+                  },
+                  "innerWidth": {
+                    "type": "string"
+                  },
+                  "outerHeight": {
+                    "type": "string"
+                  },
+                  "outerWidth": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "innerHeight",
+                  "innerWidth",
+                  "outerHeight",
+                  "outerWidth"
+                ],
+                "type": "object"
+              },
+              "unselected": {
+                "additionalProperties": false,
+                "properties": {
+                  "innerHeight": {
+                    "type": "string"
+                  },
+                  "innerWidth": {
+                    "type": "string"
+                  },
+                  "outerHeight": {
+                    "type": "string"
+                  },
+                  "outerWidth": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "innerHeight",
+                  "innerWidth",
+                  "outerHeight",
+                  "outerWidth"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "selected",
+              "unselected"
+            ],
+            "type": "object"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "toggleSizes": {
+          "additionalProperties": {
+            "additionalProperties": false,
+            "properties": {
+              "handleHeight": {
+                "type": "string"
+              },
+              "handleWidth": {
+                "type": "string"
+              },
+              "selectedInternalPadding": {
+                "$ref": "#/definitions/padding"
+              },
+              "trackHeight": {
+                "type": "string"
+              },
+              "trackWidth": {
+                "type": "string"
+              },
+              "unselectedInternalPadding": {
+                "$ref": "#/definitions/padding"
+              }
+            },
+            "required": [
+              "handleHeight",
+              "handleWidth",
+              "selectedInternalPadding",
+              "trackHeight",
+              "trackWidth",
+              "unselectedInternalPadding"
+            ],
+            "type": "object"
+          },
+          "minProperties": 1,
+          "type": "object"
+        }
+      },
+      "required": [
+        "buttonSizes",
+        "checkboxSizes",
+        "chipSizes",
+        "iconButtonSizes",
+        "iconSizes",
+        "iconWithBackgroundSizes",
+        "radioButtonSizes",
+        "toggleSizes"
+      ],
+      "type": "object"
+    },
+    "componentStyles": {
+      "additionalProperties": false,
+      "properties": {
+        "buttonStyles": {
+          "additionalProperties": {
+            "additionalProperties": false,
+            "properties": {
+              "cornerRadius": {
+                "type": "string"
+              },
+              "defaultState": {
+                "$ref": "#/definitions/buttonStateStyles"
+              },
+              "disabledState": {
+                "$ref": "#/definitions/buttonStateStyles"
+              },
+              "focusState": {
+                "$ref": "#/definitions/buttonStateStyles"
+              },
+              "hoverState": {
+                "$ref": "#/definitions/buttonStateStyles"
+              },
+              "pressedState": {
+                "$ref": "#/definitions/buttonStateStyles"
+              }
+            },
+            "required": [
+              "defaultState",
+              "disabledState",
+              "focusState",
+              "hoverState",
+              "pressedState"
+            ],
+            "type": "object"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "checkboxStyles": {
+          "additionalProperties": {
+            "additionalProperties": false,
+            "properties": {
+              "cornerRadius": {
+                "type": "string"
+              },
+              "indeterminate": {
+                "additionalProperties": false,
+                "properties": {
+                  "defaultState": {
+                    "$ref": "#/definitions/checkboxStateStyles"
+                  },
+                  "disabledState": {
+                    "$ref": "#/definitions/checkboxStateStyles"
+                  },
+                  "focusState": {
+                    "$ref": "#/definitions/checkboxStateStyles"
+                  },
+                  "hoverState": {
+                    "$ref": "#/definitions/checkboxStateStyles"
+                  },
+                  "pressedState": {
+                    "$ref": "#/definitions/checkboxStateStyles"
+                  }
+                },
+                "required": [
+                  "defaultState",
+                  "disabledState",
+                  "focusState",
+                  "hoverState",
+                  "pressedState"
+                ],
+                "type": "object"
+              },
+              "selected": {
+                "additionalProperties": false,
+                "properties": {
+                  "defaultState": {
+                    "$ref": "#/definitions/checkboxStateStyles"
+                  },
+                  "disabledState": {
+                    "$ref": "#/definitions/checkboxStateStyles"
+                  },
+                  "focusState": {
+                    "$ref": "#/definitions/checkboxStateStyles"
+                  },
+                  "hoverState": {
+                    "$ref": "#/definitions/checkboxStateStyles"
+                  },
+                  "pressedState": {
+                    "$ref": "#/definitions/checkboxStateStyles"
+                  }
+                },
+                "required": [
+                  "defaultState",
+                  "disabledState",
+                  "focusState",
+                  "hoverState",
+                  "pressedState"
+                ],
+                "type": "object"
+              },
+              "unselected": {
+                "additionalProperties": false,
+                "properties": {
+                  "defaultState": {
+                    "$ref": "#/definitions/checkboxStateStyles"
+                  },
+                  "disabledState": {
+                    "$ref": "#/definitions/checkboxStateStyles"
+                  },
+                  "focusState": {
+                    "$ref": "#/definitions/checkboxStateStyles"
+                  },
+                  "hoverState": {
+                    "$ref": "#/definitions/checkboxStateStyles"
+                  },
+                  "pressedState": {
+                    "$ref": "#/definitions/checkboxStateStyles"
+                  }
+                },
+                "required": [
+                  "defaultState",
+                  "disabledState",
+                  "focusState",
+                  "hoverState",
+                  "pressedState"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "cornerRadius",
+              "selected",
+              "unselected"
+            ],
+            "type": "object"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "chipStyles": {
+          "additionalProperties": {
+            "additionalProperties": false,
+            "properties": {
+              "cornerRadius": {
+                "type": "string"
+              },
+              "iconButtonUnicode": {
+                "type": "string"
+              },
+              "selected": {
+                "additionalProperties": false,
+                "properties": {
+                  "defaultState": {
+                    "$ref": "#/definitions/chipStateStyles"
+                  },
+                  "disabledState": {
+                    "$ref": "#/definitions/chipStateStyles"
+                  },
+                  "focusState": {
+                    "$ref": "#/definitions/chipStateStyles"
+                  },
+                  "hoverState": {
+                    "$ref": "#/definitions/chipStateStyles"
+                  },
+                  "pressedState": {
+                    "$ref": "#/definitions/chipStateStyles"
+                  }
+                },
+                "required": [
+                  "defaultState",
+                  "disabledState",
+                  "focusState",
+                  "hoverState",
+                  "pressedState"
+                ],
+                "type": "object"
+              },
+              "unselected": {
+                "additionalProperties": false,
+                "properties": {
+                  "defaultState": {
+                    "$ref": "#/definitions/chipStateStyles"
+                  },
+                  "disabledState": {
+                    "$ref": "#/definitions/chipStateStyles"
+                  },
+                  "focusState": {
+                    "$ref": "#/definitions/chipStateStyles"
+                  },
+                  "hoverState": {
+                    "$ref": "#/definitions/chipStateStyles"
+                  },
+                  "pressedState": {
+                    "$ref": "#/definitions/chipStateStyles"
+                  }
+                },
+                "required": [
+                  "defaultState",
+                  "disabledState",
+                  "focusState",
+                  "hoverState",
+                  "pressedState"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "cornerRadius",
+              "selected",
+              "unselected"
+            ],
+            "type": "object"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "dividerStyles": {
+          "additionalProperties": {
+            "additionalProperties": false,
+            "properties": {
+              "strokeColor": {
+                "type": "string"
+              },
+              "strokeWidth": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "strokeColor",
+              "strokeWidth"
+            ],
+            "type": "object"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "drawerStyles": {
+          "additionalProperties": {
+            "additionalProperties": false,
+            "properties": {
+              "backgroundColor": {
+                "type": "string"
+              },
+              "cornerRadius": {
+                "type": "string"
+              },
+              "drawerBlur": {
+                "type": "string"
+              },
+              "elevationStyle": {
+                "type": "string"
+              },
+              "handleColor": {
+                "type": "string"
+              },
+              "handlePadding": {
+                "$ref": "#/definitions/padding"
+              }
+            },
+            "required": [
+              "backgroundColor",
+              "cornerRadius",
+              "handleColor",
+              "handlePadding"
+            ],
+            "type": "object"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "dropdownStyles": {
+          "additionalProperties": {
+            "additionalProperties": false,
+            "properties": {
+              "collapsedIconStyle": {
+                "type": "string"
+              },
+              "collapsedIconUnicode": {
+                "type": "string"
+              },
+              "dropdownControlStyle": {
+                "$ref": "#/definitions/textFieldStyle"
+              },
+              "expandedIconStyle": {
+                "type": "string"
+              },
+              "expandedIconUnicode": {
+                "type": "string"
+              },
+              "trailingIconColorDefault": {
+                "type": "string"
+              },
+              "trailingIconColorDisabled": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "collapsedIconStyle",
+              "collapsedIconUnicode",
+              "expandedIconStyle",
+              "expandedIconUnicode",
+              "trailingIconColorDefault",
+              "trailingIconColorDisabled"
+            ],
+            "type": "object"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "iconButtonStyles": {
+          "additionalProperties": {
+            "additionalProperties": false,
+            "properties": {
+              "cornerRadius": {
+                "type": "string"
+              },
+              "defaultState": {
+                "$ref": "#/definitions/iconButtonStateStyles"
+              },
+              "disabledState": {
+                "$ref": "#/definitions/iconButtonStateStyles"
+              },
+              "focusState": {
+                "$ref": "#/definitions/iconButtonStateStyles"
+              },
+              "hoverState": {
+                "$ref": "#/definitions/iconButtonStateStyles"
+              },
+              "pressedState": {
+                "$ref": "#/definitions/iconButtonStateStyles"
+              }
+            },
+            "required": [
+              "defaultState",
+              "disabledState",
+              "focusState",
+              "hoverState",
+              "pressedState"
+            ],
+            "type": "object"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "radioButtonStyles": {
+          "additionalProperties": {
+            "additionalProperties": false,
+            "properties": {
+              "innerCornerRadius": {
+                "type": "string"
+              },
+              "outerCornerRadius": {
+                "type": "string"
+              },
+              "selected": {
+                "additionalProperties": false,
+                "properties": {
+                  "defaultState": {
+                    "$ref": "#/definitions/radioButtonStateStyle"
+                  },
+                  "disabledState": {
+                    "$ref": "#/definitions/radioButtonStateStyle"
+                  },
+                  "focusState": {
+                    "$ref": "#/definitions/radioButtonStateStyle"
+                  },
+                  "hoverState": {
+                    "$ref": "#/definitions/radioButtonStateStyle"
+                  },
+                  "pressedState": {
+                    "$ref": "#/definitions/radioButtonStateStyle"
+                  }
+                },
+                "required": [
+                  "defaultState",
+                  "disabledState",
+                  "focusState",
+                  "hoverState",
+                  "pressedState"
+                ],
+                "type": "object"
+              },
+              "unselected": {
+                "additionalProperties": false,
+                "properties": {
+                  "defaultState": {
+                    "$ref": "#/definitions/radioButtonStateStyle"
+                  },
+                  "disabledState": {
+                    "$ref": "#/definitions/radioButtonStateStyle"
+                  },
+                  "focusState": {
+                    "$ref": "#/definitions/radioButtonStateStyle"
+                  },
+                  "hoverState": {
+                    "$ref": "#/definitions/radioButtonStateStyle"
+                  },
+                  "pressedState": {
+                    "$ref": "#/definitions/radioButtonStateStyle"
+                  }
+                },
+                "required": [
+                  "defaultState",
+                  "disabledState",
+                  "focusState",
+                  "hoverState",
+                  "pressedState"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "innerCornerRadius",
+              "outerCornerRadius",
+              "selected",
+              "unselected"
+            ],
+            "type": "object"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "stepperStyles": {
+          "additionalProperties": {
+            "additionalProperties": false,
+            "properties": {
+              "iconButtonSizeStyle": {
+                "type": "string"
+              },
+              "iconButtonStyle": {
+                "type": "string"
+              },
+              "labelPadding": {
+                "additionalProperties": false,
+                "properties": {
+                  "bottom": {
+                    "type": "string"
+                  },
+                  "left": {
+                    "type": "string"
+                  },
+                  "right": {
+                    "type": "string"
+                  },
+                  "top": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "left",
+                  "right"
+                ],
+                "type": "object"
+              },
+              "labelTypographyStyle": {
+                "type": "string"
+              },
+              "labelWidth": {
+                "type": "string"
+              },
+              "leadingIconUnicode": {
+                "type": "string"
+              },
+              "textColor": {
+                "type": "string"
+              },
+              "trailingIconUnicode": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "iconButtonSizeStyle",
+              "iconButtonStyle",
+              "labelPadding",
+              "labelTypographyStyle",
+              "labelWidth",
+              "leadingIconUnicode",
+              "textColor",
+              "trailingIconUnicode"
+            ],
+            "type": "object"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "surfaceStyles": {
+          "additionalProperties": {
+            "additionalProperties": false,
+            "properties": {
+              "backgroundColor": {
+                "type": "string"
+              },
+              "cornerRadius": {
+                "additionalProperties": false,
+                "properties": {
+                  "bottomLeft": {
+                    "type": "string"
+                  },
+                  "bottomRight": {
+                    "type": "string"
+                  },
+                  "topLeft": {
+                    "type": "string"
+                  },
+                  "topRight": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "bottomLeft",
+                  "bottomRight",
+                  "topLeft",
+                  "topRight"
+                ],
+                "type": "object"
+              },
+              "elevationStyle": {
+                "type": "string"
+              },
+              "strokeAlign": {
+                "type": "string",
+                "enum": [
+                  "inside",
+                  "outside",
+                  "center"
+                ]
+              },
+              "strokeColor": {
+                "type": "string"
+              },
+              "strokeWidth": {
+                "additionalProperties": false,
+                "properties": {
+                  "bottom": {
+                    "type": "string"
+                  },
+                  "left": {
+                    "type": "string"
+                  },
+                  "right": {
+                    "type": "string"
+                  },
+                  "top": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "bottom",
+                  "left",
+                  "right",
+                  "top"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "backgroundColor"
+            ],
+            "type": "object"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "textFieldStyles": {
+          "additionalProperties": {
+            "$ref": "#/definitions/textFieldStyle"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "toggleStyles": {
+          "additionalProperties": {
+            "additionalProperties": false,
+            "properties": {
+              "handleCornerRadius": {
+                "type": "string"
+              },
+              "selected": {
+                "additionalProperties": false,
+                "properties": {
+                  "defaultState": {
+                    "$ref": "#/definitions/toggleStateStyle"
+                  },
+                  "disabledState": {
+                    "$ref": "#/definitions/toggleStateStyle"
+                  },
+                  "focusState": {
+                    "$ref": "#/definitions/toggleStateStyle"
+                  },
+                  "hoverState": {
+                    "$ref": "#/definitions/toggleStateStyle"
+                  },
+                  "pressedState": {
+                    "$ref": "#/definitions/toggleStateStyle"
+                  }
+                },
+                "required": [
+                  "defaultState",
+                  "disabledState",
+                  "focusState",
+                  "hoverState",
+                  "pressedState"
+                ],
+                "type": "object"
+              },
+              "trackCornerRadius": {
+                "type": "string"
+              },
+              "unselected": {
+                "additionalProperties": false,
+                "properties": {
+                  "defaultState": {
+                    "$ref": "#/definitions/toggleStateStyle"
+                  },
+                  "disabledState": {
+                    "$ref": "#/definitions/toggleStateStyle"
+                  },
+                  "focusState": {
+                    "$ref": "#/definitions/toggleStateStyle"
+                  },
+                  "hoverState": {
+                    "$ref": "#/definitions/toggleStateStyle"
+                  },
+                  "pressedState": {
+                    "$ref": "#/definitions/toggleStateStyle"
+                  }
+                },
+                "required": [
+                  "defaultState",
+                  "disabledState",
+                  "focusState",
+                  "hoverState",
+                  "pressedState"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "handleCornerRadius",
+              "selected",
+              "trackCornerRadius",
+              "unselected"
+            ],
+            "type": "object"
+          },
+          "minProperties": 1,
+          "type": "object"
+        }
+      },
+      "required": [
+        "buttonStyles",
+        "checkboxStyles",
+        "chipStyles",
+        "dividerStyles",
+        "drawerStyles",
+        "dropdownStyles",
+        "iconButtonStyles",
+        "radioButtonStyles",
+        "stepperStyles",
+        "surfaceStyles",
+        "textFieldStyles",
+        "toggleStyles"
+      ],
+      "type": "object"
+    },
+    "elevationStyles": {
+      "additionalProperties": {
+        "properties": {
+          "blur": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          },
+          "spread": {
+            "type": "string"
+          },
+          "x": {
+            "type": "string"
+          },
+          "y": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "blur",
+          "color",
+          "spread",
+          "x",
+          "y"
+        ],
+        "type": "object"
+      },
+      "minProperties": 1,
+      "type": "object"
+    },
+    "primitiveTokens": {
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      "minProperties": 1,
+      "type": "object"
+    },
+    "semanticTokens": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "typographyStyles": {
+      "additionalProperties": {
+        "properties": {
+          "fontFamily": {
+            "type": "string"
+          },
+          "fontSize": {
+            "type": "string"
+          },
+          "fontStyle": {
+            "type": "string"
+          },
+          "fontWeight": {
+            "type": "string"
+          },
+          "letterSpacing": {
+            "type": "string"
+          },
+          "lineHeight": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "fontFamily",
+          "fontSize",
+          "fontWeight",
+          "letterSpacing",
+          "lineHeight"
+        ],
+        "type": "object"
+      },
+      "minProperties": 1,
+      "type": "object"
+    },
+    "version": {
+      "type": "string",
+      "title": "Theme JSON Version",
+      "description": "Version of the Theme JSON",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    }
+  },
+  "definitions": {
+    "buttonStateStyles": {
+      "additionalProperties": false,
+      "properties": {
+        "backgroundColor": {
+          "type": "string"
+        },
+        "elevationStyle": {
+          "type": "string"
+        },
+        "iconColor": {
+          "type": "string"
+        },
+        "strokeAlign": {
+          "type": "string",
+          "enum": [
+            "inside",
+            "outside",
+            "center"
+          ]
+        },
+        "strokeColor": {
+          "type": "string"
+        },
+        "strokeWidth": {
+          "type": "string"
+        },
+        "textColor": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "textColor"
+      ],
+      "type": "object"
+    },
+    "checkboxStateStyles": {
+      "additionalProperties": false,
+      "properties": {
+        "backgroundColor": {
+          "type": "string"
+        },
+        "iconColor": {
+          "type": "string"
+        },
+        "iconUnicode": {
+          "type": "string"
+        },
+        "strokeColor": {
+          "type": "string"
+        },
+        "strokeWidth": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "backgroundColor",
+        "iconColor",
+        "strokeColor",
+        "strokeWidth"
+      ],
+      "type": "object"
+    },
+    "chipStateStyles": {
+      "additionalProperties": false,
+      "properties": {
+        "backgroundColor": {
+          "type": "string"
+        },
+        "elevationStyle": {
+          "type": "string"
+        },
+        "iconButtonStyle": {
+          "type": "string"
+        },
+        "iconColor": {
+          "type": "string"
+        },
+        "strokeAlign": {
+          "type": "string",
+          "enum": [
+            "inside",
+            "outside",
+            "center"
+          ]
+        },
+        "strokeColor": {
+          "type": "string"
+        },
+        "strokeWidth": {
+          "type": "string"
+        },
+        "textColor": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "backgroundColor",
+        "elevationStyle",
+        "iconButtonStyle",
+        "strokeColor",
+        "strokeWidth",
+        "textColor"
+      ],
+      "type": "object"
+    },
+    "iconButtonStateStyles": {
+      "additionalProperties": false,
+      "properties": {
+        "backgroundColor": {
+          "type": "string"
+        },
+        "elevationStyle": {
+          "type": "string"
+        },
+        "iconColor": {
+          "type": "string"
+        },
+        "strokeAlign": {
+          "type": "string",
+          "enum": [
+            "inside",
+            "outside",
+            "center"
+          ]
+        },
+        "strokeColor": {
+          "type": "string"
+        },
+        "strokeWidth": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "iconColor"
+      ],
+      "type": "object"
+    },
+    "padding": {
+      "additionalProperties": false,
+      "properties": {
+        "bottom": {
+          "type": "string"
+        },
+        "left": {
+          "type": "string"
+        },
+        "right": {
+          "type": "string"
+        },
+        "top": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "bottom",
+        "left",
+        "right",
+        "top"
+      ],
+      "type": "object"
+    },
+    "radioButtonStateStyle": {
+      "additionalProperties": false,
+      "properties": {
+        "innerBackgroundColor": {
+          "type": "string"
+        },
+        "innerStrokeColor": {
+          "type": "string"
+        },
+        "innerStrokeWidth": {
+          "type": "string"
+        },
+        "outerBackgroundColor": {
+          "type": "string"
+        },
+        "outerStrokeColor": {
+          "type": "string"
+        },
+        "outerStrokeWidth": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "innerBackgroundColor",
+        "innerStrokeColor",
+        "innerStrokeWidth",
+        "outerBackgroundColor",
+        "outerStrokeColor",
+        "outerStrokeWidth"
+      ],
+      "type": "object"
+    },
+    "textFieldStateStyle": {
+      "additionalProperties": false,
+      "properties": {
+        "backgroundColor": {
+          "type": "string"
+        },
+        "cursorColor": {
+          "type": "string"
+        },
+        "elevationStyle": {
+          "type": "string"
+        },
+        "inputLabelColor": {
+          "type": "string"
+        },
+        "placeholderLabelColor": {
+          "type": "string"
+        },
+        "strokeAlign": {
+          "type": "string",
+          "enum": [
+            "inside",
+            "outside",
+            "center"
+          ]
+        },
+        "strokeColor": {
+          "type": "string"
+        },
+        "strokeWidth": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "backgroundColor",
+        "inputLabelColor",
+        "placeholderLabelColor"
+      ],
+      "type": "object"
+    },
+    "textFieldStyle": {
+      "additionalProperties": false,
+      "properties": {
+        "clearIconButtonSize": {
+          "type": "string"
+        },
+        "clearIconButtonStyle": {
+          "type": "string"
+        },
+        "clearIconButtonUnicode": {
+          "type": "string"
+        },
+        "cornerRadius": {
+          "type": "string"
+        },
+        "defaultState": {
+          "$ref": "#/definitions/textFieldStateStyle"
+        },
+        "disabledState": {
+          "$ref": "#/definitions/textFieldStateStyle"
+        },
+        "errorFocusState": {
+          "$ref": "#/definitions/textFieldStateStyle"
+        },
+        "errorHoverState": {
+          "$ref": "#/definitions/textFieldStateStyle"
+        },
+        "errorState": {
+          "$ref": "#/definitions/textFieldStateStyle"
+        },
+        "floatingLabelTypographyStyle": {
+          "type": "string"
+        },
+        "focusState": {
+          "$ref": "#/definitions/textFieldStateStyle"
+        },
+        "hoverState": {
+          "$ref": "#/definitions/textFieldStateStyle"
+        },
+        "iconSpacing": {
+          "type": "string"
+        },
+        "inputTypographyStyle": {
+          "type": "string"
+        },
+        "internalPadding": {
+          "$ref": "#/definitions/padding"
+        },
+        "placeholderLabelTypographyStyle": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "defaultState",
+        "focusState",
+        "hoverState",
+        "inputTypographyStyle",
+        "placeholderLabelTypographyStyle",
+        "iconSpacing"
+      ],
+      "type": "object"
+    },
+    "toggleStateStyle": {
+      "additionalProperties": false,
+      "properties": {
+        "handleBackgroundColor": {
+          "type": "string"
+        },
+        "handleElevationStyle": {
+          "type": "string"
+        },
+        "handleStrokeColor": {
+          "type": "string"
+        },
+        "handleStrokeWidth": {
+          "type": "string"
+        },
+        "trackBackgroundColor": {
+          "type": "string"
+        },
+        "trackStrokeColor": {
+          "type": "string"
+        },
+        "trackStrokeWidth": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "handleBackgroundColor",
+        "handleElevationStyle",
+        "handleStrokeColor",
+        "handleStrokeWidth",
+        "trackBackgroundColor",
+        "trackStrokeColor",
+        "trackStrokeWidth"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "colorSemanticTokens",
+    "componentSizes",
+    "componentStyles",
+    "elevationStyles",
+    "primitiveTokens",
+    "semanticTokens",
+    "typographyStyles",
+    "version"
+  ],
+  "type": "object"
+}
