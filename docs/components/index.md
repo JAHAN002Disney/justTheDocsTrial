@@ -3,7 +3,7 @@ title: Components
 has_toc: false
 ---
 
-# Components
+# Component Status
 
 ## Technology Overview
 
