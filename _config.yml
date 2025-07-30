@@ -3,6 +3,7 @@ description: The landing page for the Vista Components documentation.
 theme: just-the-docs
 
 url: https://jahan002disney.github.io/justTheDocsTrial
+baseurl: "/justTheDocsTrial"
 
 defaults:
   - scope:
